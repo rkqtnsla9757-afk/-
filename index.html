@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>우리 아들도율이</title>
+  <title>우리 결혼합니다</title>
+  <!-- 구글 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <!-- 애니메이션용 라이브러리 AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -57,6 +61,10 @@
       width: 100%;
       border-radius: 10px;
       object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
     footer {
       padding: 20px;
@@ -66,12 +74,12 @@
   </style>
 </head>
 <body>
-  <header>
-    💍 길도율 돌잔치
+  <header data-aos="fade-down">
+    💍 Wedding Invitation
   </header>
 
-  <section>
-    <div class="names">길갑수 ❤ 김슬빈</div>
+  <section data-aos="fade-up">
+    <div class="names">김철수 ❤ 이영희</div>
     <div class="date-place">
       2025년 10월 12일 (일요일) 오후 1시<br>
       서울 웨딩컨벤션 3층 그랜드홀
@@ -79,7 +87,7 @@
     <p>저희 두 사람이 소중한 약속을 맺는 날<br> 함께해 주시면 감사하겠습니다.</p>
   </section>
 
-  <section class="map">
+  <section class="map" data-aos="zoom-in">
     <h3>오시는 길</h3>
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!..." 
@@ -87,25 +95,37 @@
     </iframe>
   </section>
 
-  <section class="account">
+  <section class="account" data-aos="flip-left">
     <h3>마음 전하실 곳</h3>
     <p>신랑 계좌: 123-456-789012 (국민은행)<br>
     신부 계좌: 987-654-321098 (신한은행)</p>
   </section>
 
-  <section>
+  <section data-aos="fade-up">
     <h3>우리 사진</h3>
     <div class="gallery">
+      <!-- 📌 여기에 원하는 만큼 사진을 넣으세요 -->
       <img src="https://picsum.photos/id/1011/400/400" alt="사진1">
       <img src="https://picsum.photos/id/1015/400/400" alt="사진2">
       <img src="https://picsum.photos/id/1016/400/400" alt="사진3">
       <img src="https://picsum.photos/id/1021/400/400" alt="사진4">
+      <!-- 📌 사진 추가 예시 -->
+      <!-- <img src="photo5.jpg" alt="사진5"> -->
+      <!-- <img src="photo6.jpg" alt="사진6"> -->
     </div>
-    <p style="margin-top:10px; font-size:0.9rem; color:#777;">(원하는 사진 주소로 바꿔주세요)</p>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     © 2025 by Cheolsu & Younghee Wedding
   </footer>
+
+  <!-- AOS 스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // 애니메이션 속도 (밀리초)
+      once: true      // 스크롤시 1번만 실행
+    });
+  </script>
 </body>
 </html>
